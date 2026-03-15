@@ -49,7 +49,7 @@ export const breakingChanges: Record<string, BreakingChangesResponse> =
           previousVersion: `1.${lastVersion.versionId - 1}.0`,
           breakingChanges: Array.from({ length: 8 }, (_, i) => ({
             type: "METHOD_REMOVED",
-            class: `com.example.LatestClass${i}`,
+            class: `pfa.example.LatestClass${i}`,
             method: `latestMethod${i}`,
           })),
         },
@@ -68,7 +68,7 @@ export const breakingChanges: Record<string, BreakingChangesResponse> =
               previousVersion: `1.${v.versionId - 1}.0`,
               breakingChanges: Array.from({ length: 4 }, (_, i) => ({
                 type: "METHOD_REMOVED",
-                class: `com.example.Class${i}`,
+                class: `pfa.example.Class${i}`,
                 method: `method${i}`,
               })),
             },
