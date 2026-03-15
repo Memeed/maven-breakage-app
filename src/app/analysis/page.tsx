@@ -47,10 +47,17 @@ function AnalysisContent() {
           <div>No breaking changes detected</div>
         ) : (
           changes.map((change: BreakingChange, i) => (
-            <div key={i} className="border p-3 rounded">
-              <div>{change.type}</div>
-              <div>{change.class}</div>
-              <div>{change.method}</div>
+            <div
+              key={i}
+              className="border border-red-200 bg-red-50 p-4 rounded-lg shadow-sm"
+            >
+              <div className="text-red-600 font-semibold mb-1">
+                {change.type}
+              </div>
+
+              <div className="text-gray-700">{change.class}</div>
+
+              <div className="text-gray-500 text-sm">{change.method}</div>
             </div>
           ))
         )}
